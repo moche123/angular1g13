@@ -1,0 +1,9 @@
+<h2>Hello from parent route</h2>
+<button (click)="toggleChildComponent()">Toggle</button>
+<div *ngIf="showChild">
+
+    <app-child [parentInfo]="parentInfo" (childEmiter)="receiveFromChild($event)"></app-child>
+</div>
+<button (click)="incrementParentInfo()" >CLICK ME</button>
+
+Información desde el hijo: <p>{{informationRecivedFromParent}}</p>
